@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "pimea0Ab5TQ=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\user\\3D Objects\\Project\\BuggyJobsAPI\\BuggyJobsAPI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.8\\microsoft.aspnetcore.openapi.9.0.8.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}
