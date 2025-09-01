@@ -22,19 +22,13 @@ namespace JobSystemAPI.Controllers
         public IActionResult AddJob(Job job)
         {
             if (string.IsNullOrWhiteSpace(job.Title))
-            {
                 return BadRequest("Title is required");
-            }
 
-            jobs.Add(new Job
-            {
-                Id = nextId++,
-                Title = job.Title,
-                Description = job.Description,
-                Location = job.Location,
-                Type = job.Type,
-                ClosingDate = job.ClosingDate
-            });
+            if (job.ClosingDate <= DateTime.Now)
+                return BadRequest("Closing date must be in the future");
+
+            job.Id = nextId++;
+            jobs.Add(job);
 
             return Ok(job);
         }
@@ -42,7 +36,11 @@ namespace JobSystemAPI.Controllers
         [HttpDelete("{id}")]
         public IActionResult DeleteJob(int id)
         {
-            jobs.RemoveAll(j => j.Id == id);
+            var job = jobs.FirstOrDefault(j => j.Id == id);
+            if (job == null)
+                return NotFound("Job not found");
+
+            jobs.Remove(job);
             return Ok("Job deleted");
         }
     }
@@ -50,10 +48,10 @@ namespace JobSystemAPI.Controllers
     public class Job
     {
         public int Id { get; set; }
-        public string Title { get; set; }
-        public string Description { get; set; }
-        public string Location { get; set; }
-        public string Type { get; set; }
+        public string Title { get; set; } = null!;
+        public string? Description { get; set; }
+        public string? Location { get; set; }
+        public string? Type { get; set; }
         public DateTime ClosingDate { get; set; }
     }
 }

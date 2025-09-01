@@ -30,3 +30,4 @@ C:\Users\user\3D Objects\Project\BuggyJobsAPI\obj\Debug\net9.0\refint\BuggyJobsA
 C:\Users\user\3D Objects\Project\BuggyJobsAPI\obj\Debug\net9.0\BuggyJobsAPI.pdb
 C:\Users\user\3D Objects\Project\BuggyJobsAPI\obj\Debug\net9.0\BuggyJobsAPI.genruntimeconfig.cache
 C:\Users\user\3D Objects\Project\BuggyJobsAPI\obj\Debug\net9.0\ref\BuggyJobsAPI.dll
+C:\Users\user\3D Objects\Project\BuggyJobsAPI\obj\Debug\net9.0\BuggyJobsAPI.sourcelink.json
