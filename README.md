@@ -24,5 +24,3 @@ This is the **backend API** for the Buggy Jobs Job Posting System. Built with **
 
 ---
 
-## Project Structure
-
