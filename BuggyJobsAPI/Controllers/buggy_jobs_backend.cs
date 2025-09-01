@@ -12,12 +12,14 @@ namespace JobSystemAPI.Controllers
         private static List<Job> jobs = new List<Job>();
         private static int nextId = 1;
 
+        // Get all jobs
         [HttpGet]
         public IEnumerable<Job> GetJobs()
         {
             return jobs;
         }
 
+        // Add a new job with validation
         [HttpPost]
         public IActionResult AddJob(Job job)
         {
@@ -33,6 +35,7 @@ namespace JobSystemAPI.Controllers
             return Ok(job);
         }
 
+        // Delete a job by ID with existence check
         [HttpDelete("{id}")]
         public IActionResult DeleteJob(int id)
         {

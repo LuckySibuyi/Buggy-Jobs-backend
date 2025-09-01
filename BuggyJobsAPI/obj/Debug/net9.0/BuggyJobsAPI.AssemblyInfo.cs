@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BuggyJobsAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+73d4a0c70c9a6f57f080e282abb268f3eabd1f75")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0bf9b4b1a0666baf2dd698b19eeb909a79872afd")]
 [assembly: System.Reflection.AssemblyProductAttribute("BuggyJobsAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BuggyJobsAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

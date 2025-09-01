@@ -1,22 +1,26 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using JobSystemAPI.Controllers;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Configure JSON options (fully qualified to avoid ambiguity)
-builder.Services.Configure<Microsoft.AspNetCore.Http.Json.JsonOptions>(options =>
-{
-    options.SerializerOptions.PropertyNamingPolicy = null;
-});
-
-// Add controllers
+// Add services
 builder.Services.AddControllers();
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(policy =>
+    {
+        policy.AllowAnyOrigin()
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+});
 
 var app = builder.Build();
 
-// Use routing and map controllers directly (no UseEndpoints)
+// Configure middleware
+app.UseCors();
+app.UseRouting();
 app.MapControllers();
 
 app.Run();
